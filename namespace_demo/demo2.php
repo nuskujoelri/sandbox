@@ -12,7 +12,7 @@ use second\A;
 
 /* qualified class name */
 //$object1 = new second\A;
-$object = new A; 
+$object = new A;  //sns.php
 
 
 echo "<br>";
@@ -22,7 +22,7 @@ echo "<br>";
 //$sObjectA = new A;
 
 /* FQCN: fully qualified class name */
-$object = new \A;
+$object = new \A; //fns.php
 
 
 ?>
