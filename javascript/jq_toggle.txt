@@ -1,0 +1,9 @@
+const resultSet = $("#resultset");
+const toggleButton = $("#toggleButton");
+
+
+toggleButton.on("click",function(){
+	 resultSet.toggle(500);
+	 if(toggle.text() == "Hide") toggleButton.text("Show");
+	 else toggleButton.text("Hide");	
+});
