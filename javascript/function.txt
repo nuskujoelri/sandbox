@@ -1,0 +1,8 @@
+function showItThen(msg, callback){
+	console.log(msg);
+	callback();
+}
+
+showItThen("hello", function(){
+	console.log('callback called.');
+});
