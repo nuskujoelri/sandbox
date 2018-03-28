@@ -1,0 +1,15 @@
+SET @t1 = '10master';
+DESCRIBE t1; #EXPLAIN t1;
+SELECT count(*) FROM t1;
+SELECT * FROM t1;
+
+
+
+SELECT VERSION();
+SHOW TABLES;
+
+
+
+/*****************************************
+The DESCRIBE and EXPLAIN statements are synonyms, used either to obtain information about table structure or query execution plans.
+*/

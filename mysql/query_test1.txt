@@ -1,5 +1,8 @@
 create table calc(x int, y int);
+insert into calc values(1, 5),(2, 6),(3, 7),(4, 8);
+
+
 create table employee(x int, y int);
 
--- insert into calc values(1, 5),(2, 6),(3, 7),(4, 8);
+
 -- select x,y, (x+y) from calc;
