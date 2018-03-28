@@ -24,11 +24,19 @@ let results = [
 resultList.empty();
 $.each(results, function( i, item ){
 	
-	let newResult = "<div class='result'>" + 
+	let newResult = $("<div class='result'>" + 
 		"<div class='title'>" + item.name + "</div>" +
 		"<div class='language'>" + item.language + "</div>" +
 		"<div class='owner'>" + item.owner.name + "</div>" +
-		"</div>";
+		"</div>");
+
+	newResult.hover(function(){
+		//make it darker
+		$(this).css("background-color","lightgray");
+	},function(){
+		//make it lighter
+		$(this).css("background-color","transparent");
+	});
 
 	resultList.append(newResult);
 
