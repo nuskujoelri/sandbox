@@ -1,0 +1,17 @@
+let search = "<api json link>";
+
+// default
+$get(search, function(r){
+	console.log(r.items.length);
+});
+
+
+// improve with promises.
+$get(search)
+	.success(function(r){
+		// console.log(r.items.length);
+		displayResults( r.items ); 
+	})
+	.fail(function(err){
+		console.log("Failed to query.");
+	});

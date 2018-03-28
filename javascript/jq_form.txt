@@ -1,0 +1,20 @@
+$("#form").on("submit",function(){
+	
+	let searchPhrase = $("#searchPhrase");
+
+	if(searchPhrase){
+
+		searchPhrase.text("Performing search ...");
+		....
+		....
+
+		$get(search)
+			.success(...)
+			.fail(...)
+			.done(...);
+
+	}
+
+
+	return false;
+});
