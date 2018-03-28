@@ -1,0 +1,35 @@
+let results = [
+	{
+	  name: "A",
+	  language: "A1",
+	  score: 4.5,
+	  showlog: function(){},
+	  owner: {
+	  	name: "Mr. A",
+	  	id : 12344556
+	  }
+	},
+	{
+	  name: "B",
+	  language: "B1",
+	  score: 5,
+	  showlog: function(){},
+	  owner: {
+	  	name: "Mr. B",
+	  	id : 12344556
+	  }	  
+	},
+	];
+
+resultList.empty();
+$.each(results, function( i, item ){
+	
+	let newResult = "<div class='result'>" + 
+		"<div class='title'>" + item.name + "</div>" +
+		"<div class='language'>" + item.language + "</div>" +
+		"<div class='owner'>" + item.owner.name + "</div>" +
+		"</div>";
+
+	resultList.append(newResult);
+
+});
