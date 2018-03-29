@@ -1,0 +1,10 @@
+var testArray = ['first', 'second', 'third'];
+
+var swap = function(theArray, indexA, indexB) {
+    var temp = theArray[indexA];
+    theArray[indexA] = theArray[indexB];
+    theArray[indexB] = temp;
+};
+
+swap(testArray, 0, 1);
+console.log(testArray);
