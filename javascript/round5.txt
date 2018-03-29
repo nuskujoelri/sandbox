@@ -1,3 +1,5 @@
+It's just a variation of the common rounding number to nearest multiple of x function Math.round(number/x)*x, but using .ceil instead of .round makes it always round up instead of down/up according to mathematical rules.
+
 function round5(x)
 {
     return Math.ceil(x/5)*5;
