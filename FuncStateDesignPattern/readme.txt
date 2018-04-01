@@ -1,0 +1,1 @@
+http://www.php5dp.com/tag/php-immutable-objects/

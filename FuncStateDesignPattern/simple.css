@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* CSS Document */
+/*E0DAC8 (cream) B4BEA3 (pale green) 849485 (dusty green), 303030 (dark gray), 030608 (black)*/
+
+body
+{
+	background-color:#E0DAC8;
+	color:#030608;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1,h2
+{
+	background-color:#B4BEA3;
+	color:#303030;
+	text-align:center;
+}
+
+iframe
+{
+	width:268px;
+	height: 418px;
+	background-color: #849485;
+}
