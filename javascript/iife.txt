@@ -1,4 +1,7 @@
-// Immediately Invoked Function Expressions (IIFE)
+* Immediately Invoked Function Expressions (IIFE)
+* The inner function is scoped to the IIFE. Of course you can't access it from the global scope.
+* If you want to, you'll have to set window.Test = Test inside the IIFE.
+
 (function(){
   
  // let B = function (){
