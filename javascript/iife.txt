@@ -1,0 +1,16 @@
+// Immediately Invoked Function Expressions (IIFE)
+(function(){
+  
+ // let B = function (){
+ //      alert('B');
+ //  } 
+  
+  function B(){
+    alert('B');
+  }
+  
+  window.B = B;
+  
+})();
+
+<button onclick="B()">CALL BACK2</button>
