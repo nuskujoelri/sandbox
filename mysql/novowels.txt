@@ -1,0 +1,3 @@
+select city from station
+where city rlike '^[^aeiouAEIOU].*' or city rlike '.*[^aeiouAEIOU]$'
+group by city;
