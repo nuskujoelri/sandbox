@@ -1,0 +1,8 @@
+#create table testdb (x int, firstname varchar(10));
+insert into testdb values(1, 'Mike'),(2, 'Mark'),(3, 'Gabrielle');
+
+select * from testdb
+WHERE firstname like 'M%'
+union
+select * from testdb
+WHERE firstname like '%e';
