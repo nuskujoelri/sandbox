@@ -1,0 +1,61 @@
++-------------+
+|    people   |
++-------------+
+| person_id   | k  
++-------------+
+| full_name   |
++-------------+
+
++---------------+
+|    loans      |
++---------------+
+| loan_id       |
++---------------+
+| person_id     | f 
++---------------+
+| amount        |
++---------------+
+| end_date      |
++---------------+
+| is_paid_out   |
++---------------+
+
+
+SELECT
+p.person_id,
+p.full_name
+SUM(CASE WHEN l.end_date < CURRENT_DATE THEN l.amount ELSE 0 END) AS total
+FROM people p
+JOIN loans l ON p.person_id AND l.is_paid_out = 0
+GROUP BY p.person_id, p.full_name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++----------------------------+
+The list of people who have "overdue and/or remaining" payments with the sum of their overdue
+
+The list of people who have 'only overdue' payments with the sum of their overdue payments.
+
+The list of people who have 'only remaining' patments with the 'sum of their remaining payments'
+
+The list of 'all' people with 'the sum of their remaining payments'.

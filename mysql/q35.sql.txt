@@ -1,0 +1,95 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Generation Time: Apr 03, 2018 at 08:40 PM
+-- Server version: 5.7.19
+-- PHP Version: 5.6.31
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ibinex`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_items`
+--
+
+DROP TABLE IF EXISTS `order_items`;
+CREATE TABLE IF NOT EXISTS `order_items` (
+  `order_id` int(11) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `order_items`
+--
+
+INSERT INTO `order_items` (`order_id`, `product_id`, `quantity`) VALUES
+(1, 1, 100),
+(2, 2, 100),
+(3, 3, 100),
+(4, 4, 100),
+(5, 5, 100),
+(6, 6, 100),
+(7, 7, 100),
+(8, 8, 100),
+(9, 9, 100),
+(10, 10, 100),
+(11, 3, 100),
+(12, 3, 100),
+(13, 3, 100),
+(14, 3, 100),
+(15, 2, 100),
+(16, 2, 100),
+(17, 2, 100),
+(18, 1, 100),
+(19, 1, 100),
+(20, 1, 100);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products_tbl`
+--
+
+DROP TABLE IF EXISTS `products_tbl`;
+CREATE TABLE IF NOT EXISTS `products_tbl` (
+  `product_id` int(11) DEFAULT NULL,
+  `title` varchar(10) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `products_tbl`
+--
+
+INSERT INTO `products_tbl` (`product_id`, `title`) VALUES
+(1, 'A1'),
+(2, 'A2'),
+(3, 'A3'),
+(4, 'A4'),
+(5, 'A5'),
+(6, 'A6'),
+(7, 'A7'),
+(8, 'A8'),
+(9, 'A9'),
+(10, 'A10');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,46 @@
++-------------+
+|   products  |
++-------------+
+| products_id | f  
++-------------+
+| title       |
++-------------+
+
++---------------+
+|  order_items  |
++---------------+
+| order_id      |
++---------------+
+| products_id   | f 
++---------------+
+| quantity      |
++---------------+
+
+
+
+SELECT it1.product_id, it2.product_id
+FROM order_items AS it1
+INNER JOIN order_items AS it2 
+ON it1.order_id = it2.order_id AND
+it2.product_id <> it1.product_id
+GROUP BY it1.product_id, it2.product_id
+ORDER BY COUNT(*) DESC
+LIMIT 3;
+
+
+SELECT it1.product_id, it2.product_id
+FROM order_items AS it1
+CROSS JOIN order_items AS it2 
+WHERE it1.order_id = it2.order_id 
+GROUP BY it1.product_id, it2.product_id
+ORDER BY COUNT(*) DESC
+LIMIT 3;
+
+
+SELECT it1.product_id, it2.product_id
+FROM order_items AS it1
+INNER JOIN order_items AS it2 ON it1.order_id = it2.order_id AND 
+    it2.product_id > it1.product_id
+GROUP BY it1.product_id, it2.product_id
+ORDER BY COUNT(*) DESC
+LIMIT 3;
