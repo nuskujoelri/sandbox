@@ -27,8 +27,7 @@ p.full_name
 SUM(CASE WHEN l.end_date < CURRENT_DATE THEN l.amount ELSE 0 END) AS total
 FROM people p
 JOIN loans l ON p.person_id AND l.is_paid_out = 0
-GROUP BY p.person_id, p.full_name
-
+GROUP BY p.person_id, p.full_namei
 
 
 
@@ -52,7 +51,7 @@ GROUP BY p.person_id, p.full_name
 
 
 +----------------------------+
-The list of people who have "overdue and/or remaining" payments with the sum of their overdue
+The list of people who have "overdue and/or remaining" payments with the sum of their overdue ...
 
 The list of people who have 'only overdue' payments with the sum of their overdue payments.
 
